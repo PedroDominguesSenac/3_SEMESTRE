@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="424.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.exemplotelas.TelaCadastroController">
+   <children>
+      <TitledPane collapsible="false" layoutX="25.0" layoutY="14.0" prefHeight="143.0" prefWidth="512.0" text="Informações Pessoais" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textNome" layoutX="29.0" layoutY="27.0" prefHeight="25.0" prefWidth="165.0" promptText="Nome" />
+                  <TextField fx:id="textSobrenome" layoutX="207.0" layoutY="27.0" prefHeight="25.0" prefWidth="314.0" promptText="Sobrenome" />
+                  <DatePicker fx:id="dateNascimento" layoutX="28.0" layoutY="71.0" prefHeight="25.0" prefWidth="139.0" />
+                  <ComboBox fx:id="comboGenero" layoutX="173.0" layoutY="71.0" prefHeight="25.0" prefWidth="81.0" promptText="Gênero" />
+                  <TextField fx:id="textRg" layoutX="264.0" layoutY="71.0" prefHeight="25.0" prefWidth="111.0" promptText="RG" />
+                  <TextField fx:id="textCpf" layoutX="385.0" layoutY="71.0" prefHeight="25.0" prefWidth="135.0" promptText="CPF" />
+               </children>
+            </AnchorPane>
+         </content></TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="25.0" layoutY="180.0" prefHeight="177.0" prefWidth="608.0" text="Contato">
+         <content>
+            <AnchorPane prefHeight="151.0" prefWidth="589.0">
+               <children>
+                  <TextField fx:id="textTelFixo" layoutX="30.0" layoutY="39.0" prefHeight="25.0" prefWidth="121.0" promptText="Telefone Fixo" />
+                  <TextField fx:id="textCel" layoutX="158.0" layoutY="39.0" prefHeight="25.0" prefWidth="117.0" promptText="Celular" />
+                  <TextField fx:id="textEmail" layoutX="282.0" layoutY="39.0" prefHeight="25.0" prefWidth="241.0" promptText="Email" />
+                  <Label layoutX="30.0" layoutY="87.0" prefHeight="17.0" prefWidth="92.0" text="Permite Contato" />
+                  <RadioButton layoutX="30.0" layoutY="113.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="44.0" text="Sim">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="permiteContato" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton layoutX="74.0" layoutY="113.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="49.0" text="Não" toggleGroup="$permiteContato" />
+                  <Label layoutX="135.0" layoutY="87.0" text="Preferências de Contato" />
+                  <CheckBox fx:id="checkTelFixo" layoutX="135.0" layoutY="113.0" mnemonicParsing="false" text="Telefone Fixo" />
+                  <CheckBox fx:id="checkCelular" layoutX="239.0" layoutY="113.0" mnemonicParsing="false" text="Celular" />
+                  <CheckBox fx:id="checkEmail" layoutX="310.0" layoutY="113.0" mnemonicParsing="false" text="Email" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="25.0" layoutY="373.0" mnemonicParsing="false" onAction="#sair" text="Sair" />
+      <Button layoutX="429.0" layoutY="373.0" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="58.0" text="Limpar" />
+      <Button layoutX="494.0" layoutY="373.0" mnemonicParsing="false" onAction="#carregar" prefHeight="25.0" prefWidth="66.0" text="Carregar" />
+      <Button layoutX="567.0" layoutY="373.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="66.0" text="Salvar" />
+   </children>
+</AnchorPane>
